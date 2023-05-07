@@ -1,5 +1,5 @@
 <h2>Add your news<h2>
-<%= form_for :news, :url => @news_path do |f|%>
+<%= form_for :post, url: posts_path do |f|%>
     <p>
         Name<br>
         <%= f.text_field :title%>

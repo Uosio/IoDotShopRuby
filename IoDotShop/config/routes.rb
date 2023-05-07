@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'news#index'
+  root 'posts#index'
 
   get 'about' => 'pages#about'
 
-  resources :news
+  resources :posts
 end
