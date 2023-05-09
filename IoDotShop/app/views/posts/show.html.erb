@@ -8,7 +8,15 @@
       <h2><%= @post.title %></h2>
       <div class="container">
         <header class=" d-flex flex-wrap justify-content-center py-3 mb-0 border-top">
+          <p><h5><%= @post.description %></h5></p>
+        </header>
+        <header class=" d-flex flex-wrap justify-content-center py-3 mb-0 border-top">
           <p><h5><%= @post.body %></h5></p>
+        </header>
+        <header class=" d-flex flex-wrap justify-content-center py-2 mb-0 border-top">
+          <%= link_to "Edit", edit_post_path(@post), :class => 'btn btn-outline-warning btn-lg'%>
+          <%= link_to "Delete", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => 'btn btn-outline-danger btn-lg' %>
+           
         </header>
       </div>
     </header>

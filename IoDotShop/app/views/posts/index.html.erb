@@ -7,7 +7,7 @@
     <header class="d-flex flex-wrap justify-content-center py-0 mb-0 border">
       <div class="container">
         <header class="d-flex flex-wrap justify-content-center my-0 py-2 mb-4 border-bottom">
-          <a href="/posts/new" type="button" class="btn btn-outline-dark btn-lg btn-block">Create post</a>
+          <a href="/posts/new" type="button" class="btn btn-secondary btn-lg btn-block" style="font-size: 150%">Create post</a>
         </header>
       </div>
 
@@ -19,7 +19,10 @@
                 <h3><%= post.title %></h3>
               </header>
               <header class=" d-flex flex-wrap justify-content-center py-3 mb-0">
-                <p><h5><%= post.body %></h5></p>
+                <p><h5><%= post.description %></h5></p>
+              </header>
+              <header class=" d-flex flex-wrap justify-content-center py-0 mb-0 border-top">
+                <%= link_to 'Read more...', post_path(post), :class => 'btn btn-outlined-light'%>
               </header>
             </div>
           </header>

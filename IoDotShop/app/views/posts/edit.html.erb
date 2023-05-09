@@ -7,20 +7,13 @@
     <header class="justify-content-center py-0 mb-0 border">
       <div class="container">
         <header class=" d-flex flex-wrap justify-content-center py-0 mb-2 border-bottom">
-          <h2>Create post<h2>
+          <h2>Edit post<h2>
         </header>
       </div>
 
-      <%= form_for :post, url: posts_path do |f|%>
+      <%= form_for :post, url: post_path(@post), method: :patch do |f|%>
         <div class="container">
           <header class=" d-flex flex-wrap justify-content-center py-3 mb-0">
-
-            <% if @post.errors.any?  %>
-              <% @post.errors.full_messages.each do |msg| %>
-                <div class="alert alert-danger"><%= msg %></div>
-              <% end %>
-            <% end %>
-
             <p>
               <div class="container">
                 <header class=" d-flex flex-wrap justify-content-center py-0 mb-0">
@@ -61,7 +54,7 @@
         <div class="container">
           <header class=" d-flex flex-wrap justify-content-center py-2 mb-0">
             <p>
-              <h3><%= f.submit({:class => "btn btn-outline-success btn-lg"}) %></h3>
+              <h3><%= f.submit({:class => "btn btn-success btn-lg"}) %></h3>
             </p>
           </header>
         </div>
